@@ -32,12 +32,12 @@ The project uses **CMake Presets** to simplify configuration and builds.
 ```bash
 cmake --list-presets
 ```
-# For Windows
+### For Windows
 ```bash
 cmake --preset win-rel
 cmake --build --preset win-rel
 ```
-# For Linux
+### For Linux
 ```bash
 cmake --preset lin-rel
 cmake --build --preset lin-rel
