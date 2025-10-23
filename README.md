@@ -43,7 +43,7 @@ cmake --preset lin-rel
 cmake --build --preset lin-rel
 ```
 ---
-🌍 **Environment Configuration**
+##🌍 **Environment Configuration**
 
 Create a `.env.aws` file in the project root with the following credentials to enable **AWS S3 integration**:
 
