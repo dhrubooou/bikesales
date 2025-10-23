@@ -22,7 +22,6 @@ The **ERPBackend** repository includes:
 
 ```bash
 git clone git@github.com:DarkStar1997/ERPBackend
-cd ERPBackend
 ```
 ## ⚙️ Build Configuration
 
