@@ -31,3 +31,14 @@ The project uses **CMake Presets** to simplify configuration and builds.
 ### List Available Presets
 ```bash
 cmake --list-presets
+```
+# For Windows
+```bash
+cmake --preset win-rel
+cmake --build --preset win-rel
+```
+# For Linux
+```bash
+cmake --preset lin-rel
+cmake --build --preset lin-rel
+```
