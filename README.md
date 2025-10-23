@@ -23,3 +23,11 @@ The **ERPBackend** repository includes:
 ```bash
 git clone git@github.com:DarkStar1997/ERPBackend
 cd ERPBackend
+```
+## ⚙️ Build Configuration
+
+The project uses **CMake Presets** to simplify configuration and builds.
+
+### List Available Presets
+```bash
+cmake --list-presets
