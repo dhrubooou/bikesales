@@ -60,9 +60,9 @@ AWS_BUCKET_NAME=<your-s3-bucket-name>
 
 The **ERPBackend** project supports **SSL/TLS** to ensure secure data transmission between the backend and client.
 
----
 
-### 🧩 Step 1: Generate SSL Certificates
+
+###  Step 1: Generate SSL Certificates
 
 Use **OpenSSL** to generate the necessary private and public certificates.
 
@@ -93,7 +93,7 @@ Provide the generated `server.crt` file to your frontend client so it can establ
 
 The **ERPBackend** project uses **gRPC** for efficient, scalable, and high-performance Remote Procedure Call (RPC) communication.
 
----
+
 
 ###  Build gRPC from Source
 
@@ -117,7 +117,7 @@ cmake --build grpc\builddir --config Release
 cmake --install grpc\builddir
 ```
 
-
+---
 ## ☁️ AWS SDK Integration
 
 The ERPBackend integrates AWS SDK for C++ to communicate with AWS S3 for file storage.
