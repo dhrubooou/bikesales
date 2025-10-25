@@ -16,14 +16,14 @@ The **ERPBackend** repository includes:
 
 ---
 
-## 🧩 Repository Setup
+##  Repository Setup
 
 ### Clone the Repository
 
 ```bash
 git clone git@github.com:DarkStar1997/ERPBackend
 ```
-## ⚙️ Build Configuration
+##  Build Configuration
 
 The project uses **CMake Presets** to simplify configuration and builds.
 
@@ -42,7 +42,7 @@ cmake --preset lin-rel
 cmake --build --preset lin-rel
 ```
 ---
-## 🌍 **Environment Configuration**
+##  **Environment Configuration**
 
 Create a `.env.aws` file in the project root with the following credentials to enable **AWS S3 integration**:
 
