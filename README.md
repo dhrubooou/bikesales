@@ -86,3 +86,31 @@ rm -rf server.csr
 ### Step 2: Share the Certificate with Frontend
 
 Provide the generated `server.crt` file to your frontend client so it can establish secure gRPC connections.
+---
+## 🧠 gRPC Integration
+
+The **ERPBackend** project uses **gRPC** for efficient, scalable, and high-performance Remote Procedure Call (RPC) communication.
+
+---
+
+### ⚙️ Build gRPC from Source
+
+Follow the steps below to build and install **gRPC** manually.
+
+```bash
+# Clone gRPC repository
+git clone -b v1.66.1 --recurse-submodules https://github.com/grpc/grpc
+
+# Create build directories
+mkdir grpc\builddir
+mkdir grpc\grpc_install
+
+# Configure build with CMake
+cmake -GNinja -S grpc -B grpc\builddir -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=grpc\grpc_install -DABSL_PROPAGATE_CXX_STD=ON -DABSL_ENABLE_INSTALL=ON
+
+# Build the project
+cmake --build grpc\builddir --config Release
+
+# Install gRPC
+cmake --install grpc\builddir
+
