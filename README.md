@@ -52,11 +52,11 @@ AWS_SECRET_KEY=<your-aws-secret-access-key>
 AWS_REGION=<your-aws-region>
 AWS_BUCKET_NAME=<your-s3-bucket-name>
 ```
-> ⚠️ **Security Note:**  
+>  **Security Note:**  
 > Never commit your `.env.aws` file to version control.  
 > Always add it to your `.gitignore` file to keep your AWS credentials safe.
 
-## 🔒 SSL/TLS Authentication
+##  SSL/TLS Authentication
 
 The **ERPBackend** project supports **SSL/TLS** to ensure secure data transmission between the backend and client.
 
@@ -81,7 +81,7 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 # Remove intermediate file
 rm -rf server.csr
 ```
-> 🗝️ The generated files — `server.key` and `server.crt` — are required for SSL/TLS communication.
+> The generated files — `server.key` and `server.crt` — are required for SSL/TLS communication.
 
 ### Step 2: Share the Certificate with Frontend
 
@@ -89,13 +89,13 @@ Provide the generated `server.crt` file to your frontend client so it can establ
 
 
 ---
-## 🧠 gRPC Integration
+##  gRPC Integration
 
 The **ERPBackend** project uses **gRPC** for efficient, scalable, and high-performance Remote Procedure Call (RPC) communication.
 
 ---
 
-### ⚙️ Build gRPC from Source
+###  Build gRPC from Source
 
 Follow the steps below to build and install **gRPC** manually.
 
@@ -126,3 +126,21 @@ To build the SDK, run `fetchdeps.bat` first, then `fetchAwsSdk.bat`.
 
 
 ---
+### Manual AWS SDK Setup
+```bash
+# Clone AWS SDK repository (with submodules)
+git clone --recurse-submodules https://github.com/aws/aws-sdk-cpp.git
+
+# Create build and install directories
+mkdir aws-sdk-cpp\builddir
+mkdir aws-sdk-cpp\aws_install
+
+# Configure CMake for S3 module
+cmake -GNinja -S aws-sdk-cpp -B aws-sdk-cpp\builddir -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=aws-sdk-cpp\aws_install -DBUILD_ONLY="s3" -DBUILD_SHARED_LIBS=OFF
+
+# Build the SDK
+cmake --build aws-sdk-cpp\builddir --config Release
+
+# Install the SDK
+cmake --install aws-sdk-cpp\builddir
+```
