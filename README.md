@@ -119,7 +119,7 @@ cmake --install grpc\builddir
 ```
 
 ---
-## ☁️ AWS SDK Integration
+##  AWS SDK Integration
 
 The ERPBackend integrates AWS SDK for C++ to communicate with AWS S3 for file storage.
 
