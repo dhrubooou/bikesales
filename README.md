@@ -56,6 +56,7 @@ AWS_BUCKET_NAME=<your-s3-bucket-name>
 > Never commit your `.env.aws` file to version control.  
 > Always add it to your `.gitignore` file to keep your AWS credentials safe.
 
+---
 ##  SSL/TLS Authentication
 
 The **ERPBackend** project supports **SSL/TLS** to ensure secure data transmission between the backend and client.
