@@ -83,3 +83,6 @@ rm -rf server.csr
 ```
 > 🗝️ The generated files — `server.key` and `server.crt` — are required for SSL/TLS communication.
 
+### Step 2: Share the Certificate with Frontend
+
+Provide the generated `server.crt` file to your frontend client so it can establish secure gRPC connections.
