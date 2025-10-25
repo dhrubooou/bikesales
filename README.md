@@ -152,6 +152,20 @@ cmake --install aws-sdk-cpp\builddir
 |---------------------|------------------------------------------------------------------------------|
 | `fetchdeps.bat`     | Fetches and builds all third-party dependencies like gRPC.                  |
 | `fetchAwsSdk.bat`   | Builds and installs the AWS SDK (S3) dependency.                            |
-| `readme.bat`        | Generates or updates the project README with build and setup instructions.  |
+
+---
+
+###  Prerequisites
+
+Make sure the following tools are installed before building the project:
+
+- **CMake** (v3.20 or later)
+- **Ninja Build System**
+- **OpenSSL**
+- **gRPC**
+- **AWS SDK for C++**
+- **Visual Studio 2022** (for Windows) or **GCC/Clang** (for Linux)
+- **Git** with submodules enabled
+
 
 
