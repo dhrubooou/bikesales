@@ -81,4 +81,5 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 # Remove intermediate file
 rm -rf server.csr
 ```
+> 🗝️ The generated files — **server.key** and **server.crt** — are required for SSL/TLS communication.
 
