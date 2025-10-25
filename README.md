@@ -46,6 +46,11 @@ cmake --build --preset lin-rel
 
 Create a `.env.aws` file in the project root with the following credentials to enable **AWS S3 integration**:
 
+```env
+AWS_ACCESS_KEY=<your-aws-access-key-id>
+AWS_SECRET_KEY=<your-aws-secret-access-key>
+AWS_REGION=<your-aws-region>
+AWS_BUCKET_NAME=<your-s3-bucket-name>
 
 ## 🔒 SSL/TLS Authentication
 
@@ -73,8 +78,3 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 rm -rf server.csr
 ```
 
-```env
-AWS_ACCESS_KEY=<your-aws-access-key-id>
-AWS_SECRET_KEY=<your-aws-secret-access-key>
-AWS_REGION=<your-aws-region>
-AWS_BUCKET_NAME=<your-s3-bucket-name>
