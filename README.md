@@ -5,7 +5,7 @@ This project provides a scalable, secure, and modular backend foundation for ent
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 The **ERPBackend** repository includes:
 - A modular backend system for enterprise operations.
@@ -45,6 +45,33 @@ cmake --build --preset lin-rel
 ##  **Environment Configuration**
 
 Create a `.env.aws` file in the project root with the following credentials to enable **AWS S3 integration**:
+
+
+## 🔒 SSL/TLS Authentication
+
+The **ERPBackend** project supports **SSL/TLS** to ensure secure data transmission between the backend and client.
+
+---
+
+### 🧩 Step 1: Generate SSL Certificates
+
+Use **OpenSSL** to generate the necessary private and public certificates.
+
+```bash
+cd cert
+
+# Generate a private key
+openssl genpkey -algorithm RSA -out server.key
+
+# Generate a certificate signing request (CSR)
+openssl req -new -key server.key -out server.csr
+
+# Generate a self-signed certificate (valid for 1 year)
+openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+# Remove intermediate file
+rm -rf server.csr
+```
 
 ```env
 AWS_ACCESS_KEY=<your-aws-access-key-id>
