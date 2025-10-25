@@ -144,3 +144,14 @@ cmake --build aws-sdk-cpp\builddir --config Release
 # Install the SDK
 cmake --install aws-sdk-cpp\builddir
 ```
+
+---
+🧰 Batch Files Summary
+
+| File Name          | Description                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| `fetchdeps.bat`     | Fetches and builds all third-party dependencies like gRPC.                  |
+| `fetchAwsSdk.bat`   | Builds and installs the AWS SDK (S3) dependency.                            |
+| `readme.bat`        | Generates or updates the project README with build and setup instructions.  |
+
+
