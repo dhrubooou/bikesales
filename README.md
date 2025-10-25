@@ -86,6 +86,8 @@ rm -rf server.csr
 ### Step 2: Share the Certificate with Frontend
 
 Provide the generated `server.crt` file to your frontend client so it can establish secure gRPC connections.
+
+
 ---
 ## 🧠 gRPC Integration
 
