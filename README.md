@@ -126,7 +126,6 @@ The ERPBackend integrates AWS SDK for C++ to communicate with AWS S3 for file st
 To build the SDK, run `fetchdeps.bat` first, then `fetchAwsSdk.bat`.
 
 
----
 ### Manual AWS SDK Setup
 ```bash
 # Clone AWS SDK repository (with submodules)
