@@ -122,7 +122,6 @@ cmake --install grpc\builddir
 
 The **ERPBackend** integrates the **AWS SDK for C++** to communicate with **AWS S3** for secure and reliable file storage.
 
----
 
 ### ⚡ Quick Setup
 
